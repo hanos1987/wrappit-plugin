@@ -8,3 +8,4 @@
 #            need a verified note (a person can override with a reason)
 verify: warn
 online-name: wrappit-plugin
+online: both

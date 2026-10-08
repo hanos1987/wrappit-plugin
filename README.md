@@ -15,7 +15,7 @@ curl -fsSL https://wrappit.dev/install.sh | sh
 Add the plugin marketplace and install the plugin in Claude Code:
 
 ```sh
-claude plugin marketplace add https://git.wrappit.dev/benji/wrappit-plugin.git
+claude plugin marketplace add hanos1987/wrappit-plugin
 ```
 
 then, inside Claude Code:
