@@ -1,0 +1,10 @@
+# Wrappit settings for this repository.
+
+# verify: how notes are checked for being correct, not just updated.
+#   off      only check that notes were updated and name real code
+#   warn     wrappit stamp asks an AI to review the note and shows problems,
+#            but stamps anyway (the default)
+#   require  wrappit stamp refuses notes the AI finds inaccurate, and commits
+#            need a verified note (a person can override with a reason)
+verify: warn
+online-name: wrappit-plugin

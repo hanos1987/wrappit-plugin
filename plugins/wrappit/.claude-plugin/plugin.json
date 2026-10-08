@@ -1,0 +1,10 @@
+{
+  "name": "wrappit",
+  "description": "Wrappit for Claude Code: a short plain-English note on every file of a git project, plus Wrappit's commands for ideas, research, retiring files, saving and hosting.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Ben"
+  },
+  "homepage": "https://wrappit.dev",
+  "keywords": ["wrappit", "notes", "documentation", "git", "handoff"]
+}

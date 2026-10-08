@@ -1,0 +1,22 @@
+{
+  "name": "wrappit",
+  "owner": {
+    "name": "Ben",
+    "url": "https://wrappit.dev"
+  },
+  "metadata": {
+    "description": "Wrappit: a plain-English note on every file of a git project, so any AI agent can pick up where another left off."
+  },
+  "plugins": [
+    {
+      "name": "wrappit",
+      "source": "./plugins/wrappit",
+      "description": "Wrappit for Claude Code: keeps file notes and project summaries current, and sets up Wrappit in your repos.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Ben"
+      },
+      "homepage": "https://wrappit.dev"
+    }
+  ]
+}

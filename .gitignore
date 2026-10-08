@@ -1,0 +1,36 @@
+# Added by Wrappit: downloaded, built and private files stay out of the project.
+# (Your own lines below win over these.)
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+.next/
+.nuxt/
+.svelte-kit/
+.parcel-cache/
+.turbo/
+.gradle/
+.pytest_cache/
+.mypy_cache/
+DerivedData/
+/.cache/
+.env
+.env.local
+.env.*.local
+.dev.vars
+*.log
+.DS_Store
+Thumbs.db
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+*.db
+*.db-journal
+
+# Added by Wrappit: its notes are never ignored
+!/.wrappit/**/
+!/.wrappit/**/*.md
+!/.wrappit/config
+!/.wrappit/ignore
