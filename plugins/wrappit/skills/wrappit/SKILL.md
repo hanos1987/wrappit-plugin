@@ -78,7 +78,7 @@ For a page the person wants to see or send (like an artifact): build one HTML fi
 it, `wrappit page share <name> link` and give them the link: anyone with it sees the page, no sign-in.
 Publishing again under the same name updates it and keeps the link. `wrappit page open <name>` gives a
 private page's link for an hour, `wrappit page list` and `wrappit page delete` do what they say, and
-`wrappit page share <name> private` takes the link back. Pages can't use cookies or storage.
+`wrappit page share <name> private` takes the link back. Pages can't use cookies or browser storage, but they can save small data on Wrappit (ticks, answers, scores) through `<script src=".wrappit/data.js">` and `window.wrappit.data`; `wrappit page api` says how. The owner can always change that data; people with the link only read it unless the page is shared with `--viewers write`.
 
 ## Working together
 

@@ -1,8 +1,8 @@
 ---
 file: plugins/wrappit/skills/wrappit/SKILL.md
-file-hash: 0b2bacbd8ed3f8898fcee223872dff2bcf51fd27
+file-hash: efc29628a643973e813e7b07e76b4b31c0b30d90
 note-hash: 2eac33be3983c569
-verified: pass Claude_Code 34a0ebb36be94bb08a545307cad2b12e
+verified: pass Claude_Code 4ab13440375c71b47f824dc024695f28
 ---
 
 # plugins/wrappit/skills/wrappit/SKILL.md
