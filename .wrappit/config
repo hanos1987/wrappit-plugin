@@ -9,3 +9,6 @@
 verify: warn
 online-name: wrappit-plugin
 online: both
+part-of: wrappit
+part-of-path: /opt/wrappit
+part-of-linked: wrappit
