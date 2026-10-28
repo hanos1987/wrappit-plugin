@@ -22,8 +22,10 @@ The person should not need to know the commands. Use them for them.
 - After you create a file: `wrappit new <file>`, then fill in every section of `.wrappit/files/<file>.md`
   (What it is, How to navigate it, What it interacts with, Why it exists, Helpful notes). A few plain
   sentences each, written for someone who has never seen the code.
-- After you change a file, update its note so it stays true, then `wrappit stamp <file>`.
-  If the change doesn't affect what the note says: `wrappit stamp --unchanged <file>`.
+- Notes are settled at commit, not after every edit. Before you commit, run `wrappit notes`: it drafts
+  the updated note for every changed or new file from its diff and lists them. Read the list, then
+  `wrappit notes accept` (or edit a draft first, or `wrappit notes reject <file>`). `wrappit stamp <file>`
+  still works for a note you wrote yourself (`--unchanged` when the change doesn't affect what it says).
 - Renamed or moved a file: `wrappit mv <old> <new>`. Deleted one: `wrappit prune` clears its note.
 - `wrappit status` shows what needs work. `wrappit fill` has an AI write missing notes (for more than
   25 files it asks first; run `wrappit fill --yes` once the person agrees). `wrappit verify` checks notes.
@@ -58,11 +60,15 @@ folder, sets up git and Wrappit, and says what to do next. Don't make the folder
   `wrappit research none "why"`.
 - **One line of work:** stay on the main line. No git branches or worktrees unless the person asks to try
   something on the side.
-- **New direction or risky idea** ("let's try another way", "what if we..."): `wrappit try <name> "what"`
-  (unsaved work comes along). It worked: `wrappit keep`. It didn't ("go back", "scrap that"):
-  `wrappit drop "why"`. Pick it up again later with `wrappit try <name>`. `wrappit directions` lists them.
-- **A second AI session must work at the same time:** `wrappit try <name> --folder`. Never run
-  `git worktree` or `git branch` yourself.
+- **New direction or risky idea** ("let's try another way", "what if we..."): `wrappit try "what it's for"`.
+  It gets its own folder beside the project. It worked: `wrappit keep`. It didn't ("go back", "scrap that"):
+  `wrappit shelve "why"`; `wrappit resume <name>` picks it up again. `wrappit lines` lists them all.
+- **A line of work of its own, or a second AI session at the same time:** `wrappit work "what it's for"`.
+  Never run `git worktree` or `git branch` yourself (Claude Code's own worktrees count as lines too).
+- **Finished a line:** `wrappit line done <name> "what's done"` (the person merges it with keep), or
+  `wrappit keep` it yourself. Dropping it: `wrappit line abandon <name> "why"`. A line stays on the
+  person's reminders until it's kept, shelved or abandoned, and the stop hook won't let you end a session
+  with a line you started still open.
 
 ## Removing and cleaning up
 
